@@ -1,0 +1,8 @@
+FROM python:alpine3.6
+
+RUN apk add --no-cache bash
+RUN pip --no-cache-dir install \
+	imqtt
+
+WORKDIR /home
+CMD imqtt && /bin/bash
